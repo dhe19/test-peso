@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .table-features {
+    @apply overflow-hidden transition-all duration-300 hover:-translate-y-2 shadow-xl;
+    animation: forwards show 0.75s ease-out;
+  }
+
+  .show-tr {
+    transition: all;
+    animation: forwards show 1.2s ease-in-out;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .show-form {
+    animation: forwards showForm 1.35s ease;
+    overflow: visible !important;
+  }
+}
+
+@keyframes showForm {
+  from {
+    opacity: 0;
+    transform: translateY(100vh);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
